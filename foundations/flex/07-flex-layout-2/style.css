@@ -2,28 +2,85 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* 
+  I had justify-content:space-between here but it didn't do anything
+  */
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.center-container {
+  flex: 1;
+  display: flex;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar {
+  font-size: 24px;
   width: 300px;
+  padding: 16px;
   background: royalblue;
   box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.sidebar ul{
+  /*display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  This was just a terrible overcomplication, better use margin-bottom
+  */
+  padding: 0px;
+  margin: 0px;
+  gap: 10px;
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 48px;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  max-width: 350px;
+  /* 
+  Also had max-height but it didn't do anything
+  */
+  padding: 15px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  margin-bottom: 15px;
 }
