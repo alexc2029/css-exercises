@@ -43,6 +43,10 @@ li {
   display: inline-block;
 }
 
+/* flex:1 here in content is better than the weird thing I did
+  (justify-content:space-between in the body)
+*/
+
 .content {
   flex: 1;
   display: flex;
